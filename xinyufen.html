@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>补齐信誉积分</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/xinyufen-style.css">
+    <link rel="shortcut icon" href="/hao/assets/icon/meiai.png" type="image/x-icon">
+    <style>
+        body .container {
+            width: 1600px;
+            height: 900px;
+            background-image: url(static/image/xinyufen-bj.jpg);
+            background-size: 100% auto;
+            margin: 30px auto;
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body onload="disableInfo()">
+    <script src="static/js/html2canvas.js"></script>
+
+    <div id="tryhtml2canvas" class="css-1xamfmm"><img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMuMiIvPgogICAgPHBhdGggZD0iTTkgMkw3LjE3IDRINGMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY2YzAtMS4xLS45LTItMi0yaC0zLjE3TDE1IDJIOXptMyAxNWMtMi43NiAwLTUtMi4yNC01LTVzMi4yNC01IDUtNSA1IDIuMjQgNSA1LTIuMjQgNS01IDV6Ii8+CiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo="
+            alt="Try html2canvas" class="css-1bgbwga"></div>
+    <div id="output"></div>
+    <div id="capture" class="container" contenteditable="true">
+
+        <div id="click" class="click">
+            <div>
+                <a href="#"><img src="static/picture/home.png" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="static/picture/start.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="c_text">
+            <p class="c_time">当前时间: 2021年05月09日17:40:49</p>
+        </div>
+
+        <div class="id_text">
+            <p>HG199305</p>
+        </div>
+
+        <div class="tanchuangbj">
+            <div class="tanchuang">
+                <div class="top">
+                    <span>系统提示</span>
+                </div>
+                <div class="center">
+                    <p>尊敬的会员ID：guan8208 关艳，您好！</p>
+                    <p>账户出现补单多次，疑似恶意套利提升本金获取数据收益，账号补单一次-2分，原账号10分，现4分，8分为正常账号，请补齐账号正常分数以便出款，也请该会员注意做单按要求下单，金额肆仟元整（1分壹仟元）。信誉分以示警告，首次恢复可以跟随账户余额一起提现，请勿恶意补单获取公司收益！</p>
+                </div>
+                <div class="bottom">
+                    <span>确认</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="static/js/canvas.js"></script>
+    <script src="/hao/assets/js/index.js"></script>
+
+</body>
+
+
+
+<script>
+    setInterval(function() {
+        var ctime = document.getElementsByClassName("c_time")[0]
+        var tim = new Date()
+        var year = tim.getFullYear()
+        var month = tim.getMonth() + 1
+        monthlength = month.toString().length
+        monthlength == 1 ? month = "0" + month : month
+        var dat = tim.getDate()
+        var datlength = dat.toString().length
+        datlength == 1 ? dat = "0" + dat : dat
+        var hours = tim.getHours()
+        var hourslength = hours.toString().length
+        hourslength == 1 ? hours = "0" + hours : hours
+        var minu = tim.getMinutes()
+        var minulength = minu.toString().length
+        minulength == 1 ? minu = "0" + minu : minu
+        var seco = tim.getSeconds()
+        var secolength = seco.toString().length
+        secolength == 1 ? seco = "0" + seco : seco = seco
+        ctime.innerHTML = "当前时间:" + year + "年" + month + "月" + dat + "日" + hours + ":" + minu + ":" + seco
+    }, 1000)
+</script>
+
+
+</html>
