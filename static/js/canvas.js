@@ -14,6 +14,6 @@ function download(canvas, filename) {
 function onScreenShotClick(event) {
     const element = document.querySelector("#capture");
     html2canvas(element).then((canvas) => {
-        download(canvas, 'Telegram@ZaoJiaShi');
+        download(canvas, 'Telegram@ZaoJiaShi.jpg');
     });
 }
