@@ -4,7 +4,7 @@ $btn.addEventListener('mousedown', onScreenShotClick);
 function download(canvas, filename) {
     const a = document.createElement('a');
     a.download = filename;
-    a.href = canvas.toDataURL("image/jpg;base64");
+    a.href = canvas.toDataURL("image/jpeg;base64");
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
