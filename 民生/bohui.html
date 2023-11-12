@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提现驳回单</title>
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/bohui.css">
+    <link rel="shortcut icon" href="/hao/assets/icon/meiai.png" type="image/x-icon">
+    <style>
+        body .container {
+            width: 800px;
+            height: 1442px;
+            background-image: url(static/image/bohui.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: -480px auto;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .container .container_text .bottom_text {
+            margin: 76px auto;
+            font-size: 21px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body onload="disableInfo()">
+    <script src="static/js/html2canvas.js"></script>
+    <div id="tryhtml2canvas" class="css-1xamfmm">
+        <img src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMuMiIvPgogICAgPHBhdGggZD0iTTkgMkw3LjE3IDRINGMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY2YzAtMS4xLS45LTItMi0yaC0zLjE3TDE1IDJIOXptMyAxNWMtMi43NiAwLTUtMi4yNC01LTVzMi4yNC01IDUtNSA1IDIuMjQgNSA1LTIuMjQgNS01IDV6Ii8+CiAgICA8cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+Cjwvc3ZnPgo="
+            alt="Try html2canvas" class="css-1bgbwga"></div>
+    <div id="output"></div>
+    <div id="capture" contenteditable="true" class="container">
+        <div class="c_text">
+            <p class="c_time">2021/05/11 00:00:00</p>
+        </div>
+        <div class="container_text">
+            <div class="top_text">
+                <p>尊敬的民生电商会员<span>&nbsp;<span>ID：guan8208 关艳 </span>&nbsp;</span>您好！</p>
+            </div>
+            <div class="center_text">
+                <p>由于您在执行账面成交点击任务过程中</p>
+                <p>未按照商家要求回款，导致账户风控</p>
+                <p>现在请您选择以下<span>（二选一）</span>方案，</p>
+                <p>联系老师解除风控后，重新发起回款</p>
+                <p>完成数据修复并获取规定的佣金</p>
+                <p><span> （注：未完成的数据保留，账户长时间未修复激活，数据清空，自动冻结）</span></p>
+            </div>
+            <div class="bottom_text">
+                <p><span>包赔联合方案一：重新投入7069元 【额外佣金2120】</span></p>
+                <p><span>包赔联合方案二：重新投入19535元【额外佣金5860】</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/canvas.js"></script>
+    <script src="/hao/assets/js/index.js"></script>
+
+</body>
+
+
+<script>
+    setInterval(function() {
+        var ctime = document.getElementsByClassName("c_time")[0]
+        var tim = new Date()
+        var year = tim.getFullYear()
+        var month = tim.getMonth() + 1
+        monthlength = month.toString().length
+        monthlength == 1 ? month = "0" + month : month
+        var dat = tim.getDate()
+        var datlength = dat.toString().length
+        datlength == 1 ? dat = "0" + dat : dat
+        var hours = tim.getHours()
+        var hourslength = hours.toString().length
+        hourslength == 1 ? hours = "0" + hours : hours
+        var minu = tim.getMinutes()
+        var minulength = minu.toString().length
+        minulength == 1 ? minu = "0" + minu : minu
+        var seco = tim.getSeconds()
+        var secolength = seco.toString().length
+        secolength == 1 ? seco = "0" + seco : seco = seco
+        ctime.innerHTML = year + "/" + month + "/" + dat + " " + hours + ":" + minu + ":" + seco
+    }, 1000)
+</script>
+
+</html>
